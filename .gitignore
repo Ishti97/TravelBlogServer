@@ -1,0 +1,6 @@
+# Ignore node module file
+node_modules/
+# Ignore .env file
+.env
+#Public folder
+public/
