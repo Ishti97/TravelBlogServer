@@ -1,9 +1,9 @@
-const asyncHandler = require("express-async-handler");
 const { PrismaClient } = require("@prisma/client");
+// const { PrismaClient } = require('../prisma/generated/clientPg');
 const prisma = new PrismaClient();
 const { generateToken, newToken } = require("../middleware/jwtToken");
 const bcrypt = require("bcrypt");
-
+const asyncHandler = require("express-async-handler");
 // LogIn
 const logIn = asyncHandler(async (req, res) => {
   const { email, password } = req.body;

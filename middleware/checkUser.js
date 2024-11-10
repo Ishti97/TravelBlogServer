@@ -20,7 +20,7 @@ const editor = expressAsyncHandler(async (req, res, next) => {
 
   if (isEditor) {
     return next();
-  } else {
+  } else { 
     return res
       .status(400)
       .json({ success: false, error: "No authority to edit post" });
